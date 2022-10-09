@@ -5,7 +5,13 @@ app.get("/", (req, res) => {
     res.send("Welcome to Spookytown!")
 })
 
+app.get("/greeting/", (req, res) => {
+    res.send("Hello, stranger.")
+})
 
+app.get("/greeting/:name", (req, res) => {
+    res.send(`Howdy, ${req.params.name}`)
+})
 
 
 
